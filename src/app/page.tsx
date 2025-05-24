@@ -2,8 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 // import { siteConfig } from "@/config/site"; // Removed unused import
-import { featuredTours } from "@/config/site";
-import { ArrowRight, MapPin, Calendar } from "lucide-react"; // Removed Camera, Star, Users, ChevronRight
+import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/hero"; // Import the Hero component
 
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white relative overflow-hidden">
       {/* Background brush for entire page */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 -mr-32 opacity-10">
+        <div className="absolute top-0 right-0 -mr-32 opacity-60">
           <Image
             src="/images/brushes/brush2.png"
             alt=""
@@ -25,9 +24,9 @@ export default function Home() {
       <Hero />
 
       {/* Gallery Section */}
-      <section className="pt-16 pb-24 relative overflow-visible">
+      <section className="pt-4 pb-16 relative overflow-visible bg-white">
         {/* Decorative brush */}
-        <div className="absolute left-0 top-1/4 -ml-20 opacity-20">
+        <div className="absolute left-0 top-1/4 -ml-20 opacity-60">
           <Image
             src="/images/brushes/brush0.png"
             alt=""
@@ -121,7 +120,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-24 relative overflow-visible">
         {/* Decorative brush */}
-        <div className="absolute right-0 top-1/2 -mr-32 opacity-15">
+        <div className="absolute right-0 top-1/2 -mr-32 opacity-60">
           <Image
             src="/images/brushes/brush1.png"
             alt=""
@@ -153,9 +152,9 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 text-white overflow-visible bg-gradient-to-b from-white via-gray-900 to-gray-900">
+      <section className="relative py-24 overflow-visible bg-white">
         {/* Decorative brush */}
-        <div className="absolute left-0 bottom-0 -ml-20 opacity-20">
+        <div className="absolute left-0 bottom-0 -ml-20 opacity-60">
           <Image
             src="/images/brushes/brush2.png"
             alt=""
@@ -165,8 +164,8 @@ export default function Home() {
           />
         </div>
         <div className="container px-4 mx-auto relative z-10 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Capture Namibia&apos;s Beauty?</h2>
-          <p className="text-xl max-w-2xl mx-auto mb-8 text-gray-300">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">Ready to Capture Namibia&apos;s Beauty?</h2>
+          <p className="text-xl max-w-2xl mx-auto mb-8 text-foreground/80">
             Book your photography adventure today and create memories that will last a lifetime.
           </p>
           <Button asChild size="lg" className="text-lg px-8 py-4 bg-amber-600 hover:bg-amber-700">
@@ -180,9 +179,9 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-24 bg-gradient-to-b from-gray-900 to-white relative overflow-visible">
+      <section className="py-24 bg-white relative overflow-visible">
         {/* Decorative brush */}
-        <div className="absolute right-0 top-1/3 -mr-32 opacity-10">
+        <div className="absolute right-0 top-1/3 -mr-32 opacity-60">
           <Image
             src="/images/brushes/brush0.png"
             alt=""

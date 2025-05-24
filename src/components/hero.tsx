@@ -4,38 +4,128 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center bg-background pb-32">
-      {/* Background brushes with better positioning */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-70">
+    <section className="relative min-h-[100vh] flex flex-col items-center justify-center text-center bg-white overflow-hidden pt-16">
+      {/* Spacer for fixed navigation */}
+      <div className="h-32 w-full"></div>
+      
+      {/* Background Brushes */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Left brush stroke */}
+        <div className="absolute left-0 top-1/4 -ml-24 opacity-60">
           <Image
             src="/images/brushes/brush1.png"
-            alt="Brush stroke background"
-            width={800}
-            height={400}
-            className="object-contain"
+            alt=""
+            width={300}
+            height={200}
+            className="transform rotate-45"
             priority
           />
         </div>
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 translate-y-1/4 opacity-50">
+        
+        {/* Right brush stroke */}
+        <div className="absolute right-0 bottom-1/4 -mr-24 opacity-60">
+          <Image
+            src="/images/brushes/brush2.png"
+            alt=""
+            width={400}
+            height={250}
+            className="transform -rotate-15"
+            priority
+          />
+        </div>
+
+        {/* Top right small brush */}
+        <div className="absolute top-20 right-1/4 opacity-40">
           <Image
             src="/images/brushes/brush0.png"
-            alt="Brush stroke background"
-            width={700}
-            height={350}
-            className="object-contain"
+            alt=""
+            width={200}
+            height={150}
+            className="transform -rotate-30"
             priority
           />
         </div>
       </div>
+      
+      {/* Hero Image */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          src="/images/backgrounds/hero.png"
+          alt="Safari Paparazzi background"
+          fill
+          className="object-cover opacity-50 scale-50"
+          style={{ transformOrigin: 'center' }}
+          priority
+        />
+      </div>
+      
+      {/* Logo */}
+      <div className="relative z-10 w-full max-w-md px-4 mx-auto -mt-[32rem] mb-8">
+        <Image
+          src="/images/logo/safpap textlogo.png"
+          alt="Safari Paparazzi"
+          width={600}
+          height={150}
+          className="mx-auto w-full h-auto max-w-full"
+          priority
+        />
+      </div>
 
+      {/* Background Image and Brushes */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Left brush stroke - behind everything */}
+        <div className="absolute left-0 top-1/4 -ml-24 opacity-60 -z-10">
+          <Image
+            src="/images/brushes/brush1.png"
+            alt=""
+            width={300}
+            height={200}
+            className="transform rotate-45"
+            priority
+          />
+        </div>
+        
+        {/* Right brush stroke - behind everything */}
+        <div className="absolute right-0 bottom-1/4 -mr-24 opacity-60 -z-10">
+          <Image
+            src="/images/brushes/brush2.png"
+            alt=""
+            width={400}
+            height={250}
+            className="transform -rotate-15"
+            priority
+          />
+        </div>
+
+        {/* Top right small brush - behind everything */}
+        <div className="absolute top-20 right-1/4 opacity-40 -z-10">
+          <Image
+            src="/images/brushes/brush0.png"
+            alt=""
+            width={200}
+            height={150}
+            className="transform -rotate-30"
+            priority
+          />
+        </div>
+
+        {/* Center background image - above brushes */}
+        <div className="relative w-full h-full z-0">
+          <Image
+            src="/images/backgrounds/hero.png"
+            alt="Safari Paparazzi background"
+            fill
+            className="object-cover opacity-50 scale-50"
+            style={{ transformOrigin: 'center' }}
+            priority
+          />
+        </div>
+      </div>
+      
       {/* Content */}
       <div className="container relative z-10">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-4 leading-tight">
-            Safari Paparazzi
-          </h1>
-          <p className="text-lg md:text-xl text-foreground/80 font-sans mb-8 max-w-xl mx-auto">
+          <p className="text-md md:text-lg text-foreground/80 font-sans mb-8 max-w-xl mx-auto">
             Namibian Photography Tours
           </p>
           <div className="flex justify-center">

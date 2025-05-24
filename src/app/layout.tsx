@@ -95,7 +95,20 @@ interface RootLayoutProps {
   // modal?: React.ReactNode // Removed as it's unused
 }
 
-export default function RootLayout({ children }: RootLayoutProps) { // Removed modal from destructuring
+// Create a layout component wrapper to prevent re-renders
+function RootLayoutContent({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <MainNav />
+      <main className="flex-1">
+        {children}
+      </main>
+      <Footer />
+    </>
+  );
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -111,11 +124,9 @@ export default function RootLayout({ children }: RootLayoutProps) { // Removed m
         openSans.variable,
         playfair.variable
       )}>
-        <MainNav />
-        <main className="flex-1">
+        <RootLayoutContent>
           {children}
-        </main>
-        <Footer />
+        </RootLayoutContent>
       </body>
     </html>
   );
