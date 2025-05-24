@@ -9,8 +9,8 @@ import { memo } from 'react';
 
 function MainNavComponent() {
   return (
-    <header className="fixed top-8 left-0 right-0 z-50">
-      <div className="container flex justify-center">
+    <header className="relative z-50 pt-4">
+      <div className="container flex justify-center mx-auto">
         <nav className="flex items-center justify-center bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full border border-gray-200 shadow-sm">
           {/* Small Logo */}
           <Link href="/" className="flex items-center mr-8">

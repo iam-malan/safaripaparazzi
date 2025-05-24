@@ -100,7 +100,7 @@ function RootLayoutContent({ children }: { children: React.ReactNode }) {
   return (
     <>
       <MainNav />
-      <main className="flex-1">
+      <main className="flex-1 pt-24">
         {children}
       </main>
       <Footer />
