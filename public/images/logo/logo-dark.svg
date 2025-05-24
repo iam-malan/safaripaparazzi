@@ -1,0 +1,7 @@
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 10H0V40H20C31.0457 40 40 31.0457 40 25C40 18.9543 31.0457 10 20 10Z" fill="#D4B483"/>
+  <path d="M20 10H40V40H20C8.9543 40 0 31.0457 0 25C0 18.9543 8.9543 10 20 10Z" fill="#C19456"/>
+  <text x="60" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#fff">SAFARI PAPARAZZI</text>
+  <path d="M180 10H200V40H180C168.954 40 160 31.0457 160 25C160 18.9543 168.954 10 180 10Z" fill="#D4B483"/>
+  <path d="M180 10H160V40H180C191.046 40 200 31.0457 200 25C200 18.9543 191.046 10 180 10Z" fill="#C19456"/>
+</svg>
